@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>متجر الصور — القصر الصغير | Boutique Photos | Photo Store</title>
+<meta name="description" content="اشتري صور القصر الصغير الاحترافية — طباعة وملفات رقمية. Buy professional photos of Ksar Sghir Morocco by Bilal El Hichou.">
+<meta name="keywords" content="متجر صور القصر الصغير, ksar sghir photos, bilal el hichou, buy photos morocco, طباعة صور">
+<meta name="author" content="Bilal El Hichou">
+<link href='https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&display=swap' rel='stylesheet'/>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Tajawal',sans-serif; background:#0a0f1a; color:#fff; }
+
+header { background:linear-gradient(135deg,#1a1a2e,#16213e); height:60px; display:flex; align-items:center; justify-content:space-between; padding:0 20px; border-bottom:2px solid #00b4d8; position:sticky; top:0; z-index:100; }
+.logo { text-decoration:none; }
+.logo-ar { font-size:18px; font-weight:900; color:#00b4d8; display:block; }
+.logo-en { font-size:9px; color:#888; letter-spacing:3px; display:block; }
+.hright { display:flex; align-items:center; gap:8px; }
+.back { color:#00b4d8; text-decoration:none; font-size:12px; font-weight:600; padding:5px 12px; border:1px solid rgba(0,180,216,0.3); border-radius:20px; }
+.lang-sw { display:flex; gap:4px; }
+.lb { background:transparent; border:1px solid rgba(0,180,216,0.3); color:#aaa; font-size:11px; font-weight:700; padding:4px 9px; border-radius:10px; cursor:pointer; font-family:'Tajawal',sans-serif; }
+.lb.on { background:#00b4d8; color:#fff; border-color:#00b4d8; }
+
+.hero { background:linear-gradient(160deg,#0d1b2a,#1a3a5c,#0d1b2a); padding:40px 20px 35px; text-align:center; border-bottom:1px solid rgba(0,180,216,0.15); }
+.hero h1 { font-size:clamp(24px,6vw,42px); font-weight:900; margin-bottom:8px; }
+.hero h1 em { color:#00b4d8; font-style:normal; }
+.hero p { color:#90e0ef; font-size:13px; margin-bottom:12px; }
+.hero-info { display:flex; justify-content:center; gap:12px; flex-wrap:wrap; }
+.hero-badge { display:inline-block; background:rgba(0,180,216,0.1); border:1px solid rgba(0,180,216,0.3); color:#90e0ef; font-size:11px; padding:4px 14px; border-radius:20px; }
+
+.filters { display:flex; gap:8px; padding:12px 15px; overflow-x:auto; background:#0d1b2a; scrollbar-width:none; border-bottom:1px solid rgba(0,180,216,0.1); }
+.filters::-webkit-scrollbar { display:none; }
+.fbtn { background:transparent; border:1px solid rgba(0,180,216,0.2); color:#aaa; font-size:11px; font-weight:600; padding:6px 14px; border-radius:20px; cursor:pointer; white-space:nowrap; font-family:'Tajawal',sans-serif; transition:all 0.2s; }
+.fbtn.on, .fbtn:hover { background:#00b4d8; color:#fff; border-color:#00b4d8; }
+
+.store-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:15px; padding:20px; max-width:1100px; margin:0 auto; }
+
+.card { background:#16213e; border:1px solid rgba(0,180,216,0.1); border-radius:14px; overflow:hidden; transition:all 0.3s; }
+.card:hover { transform:translateY(-4px); box-shadow:0 12px 30px rgba(0,180,216,0.15); border-color:#00b4d8; }
+
+.card-img { height:180px; display:flex; align-items:center; justify-content:center; font-size:60px; position:relative; }
+.card-img img { width:100%; height:100%; object-fit:cover; display:block; }
+
+.badge { position:absolute; top:10px; right:10px; font-size:9px; font-weight:700; padding:3px 10px; border-radius:10px; letter-spacing:1px; }
+.badge-print { background:#00b4d8; color:#fff; }
+.badge-digital { background:#7b1fa2; color:#fff; }
+.badge-premium { background:#e65100; color:#fff; }
+
+.card-body { padding:15px; }
+.card-name { font-size:14px; font-weight:700; color:#fff; margin-bottom:4px; line-height:1.4; }
+.card-desc { font-size:11px; color:#aaa; margin-bottom:12px; line-height:1.5; }
+.card-footer { display:flex; justify-content:space-between; align-items:center; }
+.card-price { font-size:22px; font-weight:900; color:#00b4d8; }
+.card-price small { font-size:11px; color:#aaa; font-weight:400; }
+.order-btn { background:linear-gradient(135deg,#023e8a,#00b4d8); color:#fff; font-size:11px; font-weight:700; padding:7px 14px; border-radius:20px; text-decoration:none; font-family:'Tajawal',sans-serif; transition:all 0.2s; white-space:nowrap; }
+.order-btn:hover { transform:scale(1.05); }
+
+.c1 { background:linear-gradient(135deg,#c0392b,#f39c12); }
+.c2 { background:linear-gradient(135deg,#023e8a,#0096c7); }
+.c3 { background:linear-gradient(135deg,#1b5e20,#4caf50); }
+.c4 { background:linear-gradient(135deg,#1a237e,#311b92); }
+.c5 { background:linear-gradient(135deg,#4a148c,#880e4f); }
+.c6 { background:linear-gradient(135deg,#bf360c,#ff6f00); }
+.c7 { background:linear-gradient(135deg,#006064,#00acc1); }
+.c8 { background:linear-gradient(135deg,#37474f,#546e7a); }
+
+.hidden { display:none !important; }
+
+.cta { background:linear-gradient(135deg,#0d1b2a,#1a3a5c); padding:40px 20px; text-align:center; border-top:1px solid rgba(0,180,216,0.2); margin-top:10px; }
+.cta h3 { font-size:20px; font-weight:700; color:#fff; margin-bottom:8px; }
+.cta p { color:#90e0ef; font-size:13px; margin-bottom:20px; }
+.wa-btn { display:inline-flex; align-items:center; gap:8px; background:#25d366; color:#fff; font-size:14px; font-weight:700; padding:12px 28px; border-radius:25px; text-decoration:none; font-family:'Tajawal',sans-serif; transition:all 0.3s; }
+.wa-btn:hover { transform:translateY(-2px); box-shadow:0 8px 25px rgba(37,211,102,0.4); }
+
+footer { background:#060c14; padding:18px 20px; text-align:center; border-top:1px solid #16213e; }
+.footer-links { display:flex; justify-content:center; gap:15px; flex-wrap:wrap; margin-bottom:10px; }
+.footer-links a { color:#555; text-decoration:none; font-size:12px; }
+.footer-links a:hover { color:#00b4d8; }
+.footer-copy { font-size:11px; color:#555; }
+.footer-copy span { color:#00b4d8; }
+.divider { height:1px; background:linear-gradient(90deg,transparent,rgba(0,180,216,0.3),transparent); }
+
+@media(max-width:600px) {
+  .store-grid { grid-template-columns:1fr; padding:15px; }
+  .lang-sw { display:flex; }
+  .lb { font-size:10px; padding:3px 7px; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <a href="https://www.ksarsghir.com" class="logo">
+    <span class="logo-ar" id="lname">متجر الصور</span>
+    <span class="logo-en">KSAR SGHIR STORE</span>
+  </a>
+  <div class="hright">
+    <div class="lang-sw">
+      <button class="lb on" onclick="setL('ar')">AR</button>
+      <button class="lb" onclick="setL('fr')">FR</button>
+      <button class="lb" onclick="setL('en')">EN</button>
+    </div>
+    <a href="https://www.ksarsghir.com" class="back" id="lback">← الرئيسية</a>
+  </div>
+</header>
+
+<div class="hero">
+  <h1 id="htitle">متجر <em>الصور</em></h1>
+  <p id="hdesc">صور احترافية للطباعة والاستخدام الرقمي — بعدسة بلال الهيشو</p>
+  <div class="hero-info">
+    <span class="hero-badge" id="b1">📷 20 صورة</span>
+    <span class="hero-badge" id="b2">📦 توصيل رقمي فوري</span>
+    <span class="hero-badge" id="b3">📱 واتساب للطلب</span>
+  </div>
+</div>
+
+<div class="filters">
+  <button class="fbtn on" onclick="filter(this,'all')" id="fall">🌟 الكل</button>
+  <button class="fbtn" onclick="filter(this,'print')" id="fprint">🖨️ طباعة</button>
+  <button class="fbtn" onclick="filter(this,'digital')" id="fdigital">💻 رقمي</button>
+  <button class="fbtn" onclick="filter(this,'premium')" id="fpremium">⭐ مميز</button>
+</div>
+
+<div class="store-grid" id="grid">
+
+  <div class="card" data-type="premium">
+    <div class="card-img c1"><span>🌅</span><span class="badge badge-premium" id="badge1">مميز</span></div>
+    <div class="card-body">
+      <div class="card-name" id="n1">غروب الشمس — القصر الصغير</div>
+      <div class="card-desc" id="d1">لحظة غروب ساحرة تطل على مضيق جبل طارق</div>
+      <div class="card-footer">
+        <div class="card-price">200 <small id="c1">درهم</small></div>
+        <a href="https://wa.me/212708053745?text=أريد%20طلب%20صورة%20غروب%20الشمس" class="order-btn" id="btn1" target="_blank">اطلب الآن</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" data-type="print">
+    <div class="card-img c2"><span>🌊</span><span class="badge badge-print" id="badge2">طباعة</span></div>
+    <div class="card-body">
+      <div class="card-name" id="n2">شاطئ القصر الصغير</div>
+      <div class="card-desc" id="d2">الشاطئ الرملي في الصباح الهادئ • A3</div>
+      <div class="card-footer">
+        <div class="card-price">150 <small id="c2">درهم</small></div>
+        <a href="https://wa.me/212708053745?text=أريد%20طلب%20صورة%20شاطئ%20القصر" class="order-btn" id="btn2" target="_blank">اطلب الآن</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" data-type="print">
+    <div class="card-img c3"><span>🌿</span><span class="badge badge-print" id="badge3">طباعة</span></div>
+    <div class="card-body">
+      <div class="card-name" id="n3">الربيع في بليونش</div>
+      <div class="card-desc" id="d3">أزهار صفراء مع إطلالة البحر • A3</div>
+      <div class="card-footer">
+        <div class="card-price">120 <small id="c3">درهم</small></div>
+        <a href="https://wa.me/212708053745?text=أريد%20طلب%20صورة%20بليونش" class="order-btn" id="btn3" target="_blank">اطلب الآن</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" data-type="premium">
+    <div class="card-img c4"><span>🌙</span><span class="badge badge-premium" id="badge4">مميز</span></div>
+    <div class="card-body">
+      <div class="card-name" id="n4">الهلال والنجمة</div>
+      <div class="card-desc" id="d4">لقطة نادرة للهلال • A2</div>
+      <div class="card-footer">
+        <div class="card-price">250 <small id="c4">درهم</small></div>
+        <a href="https://wa.me/212708053745?text=أريد%20طلب%20صورة%20الهلال" class="order-btn" id="btn4" target="_blank">اطلب الآن</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" data-type="digital">
+    <div class="card-img c5"><span>⚓</span><span class="badge badge-digital" id="badge5">رقمي</span></div>
+    <div class="card-body">
+      <div class="card-name" id="n5">ميناء الصيد التقليدي</div>
+      <div class="card-desc" id="d5">قوارب الصيد عند الفجر • 4K</div>
+      <div class="card-footer">
+        <div class="card-price">60 <small id="c5">درهم</small></div>
+        <a href="https://wa.me/212708053745?text=أريد%20طلب%20صورة%20الميناء" class="order-btn" id="btn5" target="_blank">اطلب الآن</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" data-type="print">
+    <div class="card-img c6"><span>🏔️</span><span class="badge badge-print" id="badge6">طباعة</span></div>
+    <div class="card-body">
+      <div class="card-name" id="n6">المناظر الطبيعية</div>
+      <div class="card-desc" id="d6">إطلالة بانورامية على المنطقة • A3</div>
+      <div class="card-footer">
+        <div class="card-price">130 <small id="c6">درهم</small></div>
+        <a href="https://wa.me/212708053745?text=أريد%20طلب%20صورة%20المناظر" class="order-btn" id="btn6" target="_blank">اطلب الآن</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" data-type="digital">
+    <div class="card-img c7"><span>🌄</span><span class="badge badge-digital" id="badge7">رقمي</span></div>
+    <div class="card-body">
+      <div class="card-name" id="n7">الشاطئ في الفجر</div>
+      <div class="card-desc" id="d7">رمال منقوشة بالأمواج • 4K</div>
+      <div class="card-footer">
+        <div class="card-price">50 <small id="c7">درهم</small></div>
+        <a href="https://wa.me/212708053745?text=أريد%20طلب%20صورة%20الفجر" class="order-btn" id="btn7" target="_blank">اطلب الآن</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" data-type="premium">
+    <div class="card-img c8"><span>🌃</span><span class="badge badge-premium" id="badge8">مميز</span></div>
+    <div class="card-body">
+      <div class="card-name" id="n8">المدينة ليلاً</div>
+      <div class="card-desc" id="d8">أضواء المدينة تنعكس على الماء • A2</div>
+      <div class="card-footer">
+        <div class="card-price">220 <small id="c8">درهم</small></div>
+        <a href="https://wa.me/212708053745?text=أريد%20طلب%20صورة%20المدينة%20ليلاً" class="order-btn" id="btn8" target="_blank">اطلب الآن</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="divider"></div>
+
+<div class="cta">
+  <h3 id="cta-title">📦 طلب مخصص؟</h3>
+  <p id="cta-desc">تريد صورة بحجم معين أو طباعة خاصة؟ تواصل معنا مباشرة</p>
+  <a href="https://wa.me/212708053745?text=أريد%20الاستفسار%20عن%20صورة%20مخصصة" class="wa-btn" id="cta-btn" target="_blank">📱 تواصل على واتساب</a>
+</div>
+
+<footer>
+  <div class="footer-links">
+    <a href="https://www.ksarsghir.com">الرئيسية</a>
+    <a href="https://gallery.ksarsghir.com">المعرض</a>
+    <a href="https://tourism.ksarsghir.com">السياحة</a>
+    <a href="https://advertise.ksarsghir.com">إعلن معنا</a>
+    <a href="https://wa.me/212708053745">تواصل</a>
+  </div>
+  <div class="footer-copy">© 2026 <span>Ksar Sghir Store</span> • Bilal El Hichou</div>
+</footer>
+
+<script>
+var L = {
+  ar: { dir:'rtl', lname:'متجر الصور', lback:'← الرئيسية',
+    htitle:'متجر <em>الصور</em>', hdesc:'صور احترافية للطباعة والاستخدام الرقمي — بعدسة بلال الهيشو',
+    b1:'📷 20 صورة', b2:'📦 توصيل رقمي فوري', b3:'📱 واتساب للطلب',
+    fall:'🌟 الكل', fprint:'🖨️ طباعة', fdigital:'💻 رقمي', fpremium:'⭐ مميز',
+    badge1:'مميز', badge2:'طباعة', badge3:'طباعة', badge4:'مميز', badge5:'رقمي', badge6:'طباعة', badge7:'رقمي', badge8:'مميز',
+    n1:'غروب الشمس — القصر الصغير', d1:'لحظة غروب ساحرة تطل على مضيق جبل طارق', c1:'درهم', btn1:'اطلب الآن',
+    n2:'شاطئ القصر الصغير', d2:'الشاطئ الرملي في الصباح الهادئ • A3', c2:'درهم', btn2:'اطلب الآن',
+    n3:'الربيع في بليونش', d3:'أزهار صفراء مع إطلالة البحر • A3', c3:'درهم', btn3:'اطلب الآن',
+    n4:'الهلال والنجمة', d4:'لقطة نادرة للهلال • A2', c4:'درهم', btn4:'اطلب الآن',
+    n5:'ميناء الصيد التقليدي', d5:'قوارب الصيد عند الفجر • 4K', c5:'درهم', btn5:'اطلب الآن',
+    n6:'المناظر الطبيعية', d6:'إطلالة بانورامية على المنطقة • A3', c6:'درهم', btn6:'اطلب الآن',
+    n7:'الشاطئ في الفجر', d7:'رمال منقوشة بالأمواج • 4K', c7:'درهم', btn7:'اطلب الآن',
+    n8:'المدينة ليلاً', d8:'أضواء المدينة تنعكس على الماء • A2', c8:'درهم', btn8:'اطلب الآن',
+    'cta-title':'📦 طلب مخصص؟', 'cta-desc':'تريد صورة بحجم معين أو طباعة خاصة؟ تواصل معنا مباشرة', 'cta-btn':'📱 تواصل على واتساب'
+  },
+  fr: { dir:'ltr', lname:'Boutique Photos', lback:'← Accueil',
+    htitle:'Boutique <em>Photos</em>', hdesc:'Photos professionnelles pour impression et usage numérique — par Bilal El Hichou',
+    b1:'📷 20 photos', b2:'📦 Livraison numérique immédiate', b3:'📱 WhatsApp pour commander',
+    fall:'🌟 Tout', fprint:'🖨️ Impression', fdigital:'💻 Numérique', fpremium:'⭐ Premium',
+    badge1:'Premium', badge2:'Impression', badge3:'Impression', badge4:'Premium', badge5:'Numérique', badge6:'Impression', badge7:'Numérique', badge8:'Premium',
+    n1:'Coucher de soleil — Ksar Sghir', d1:"Coucher de soleil sur le détroit de Gibraltar", c1:'DH', btn1:'Commander',
+    n2:'Plage de Ksar Sghir', d2:'Plage de sable le matin • A3', c2:'DH', btn2:'Commander',
+    n3:'Printemps à Belyounech', d3:'Fleurs jaunes avec vue sur la mer • A3', c3:'DH', btn3:'Commander',
+    n4:"Le Croissant et l'Étoile", d4:'Photo rare du croissant • A2', c4:'DH', btn4:'Commander',
+    n5:'Port de pêche traditionnel', d5:"Bateaux de pêche à l'aube • 4K", c5:'DH', btn5:'Commander',
+    n6:'Paysages naturels', d6:'Vue panoramique sur la région • A3', c6:'DH', btn6:'Commander',
+    n7:"La plage à l'aube", d7:'Sable sculpté par les vagues • 4K', c7:'DH', btn7:'Commander',
+    n8:'La ville la nuit', d8:"Lumières de la ville reflétées sur l'eau • A2", c8:'DH', btn8:'Commander',
+    'cta-title':'📦 Commande personnalisée?', 'cta-desc':'Vous voulez une photo dans un format spécial? Contactez-nous directement', 'cta-btn':'📱 Contacter sur WhatsApp'
+  },
+  en: { dir:'ltr', lname:'Photo Store', lback:'← Home',
+    htitle:'Photo <em>Store</em>', hdesc:'Professional photos for printing and digital use — by Bilal El Hichou',
+    b1:'📷 20 photos', b2:'📦 Instant digital delivery', b3:'📱 WhatsApp to order',
+    fall:'🌟 All', fprint:'🖨️ Print', fdigital:'💻 Digital', fpremium:'⭐ Premium',
+    badge1:'Premium', badge2:'Print', badge3:'Print', badge4:'Premium', badge5:'Digital', badge6:'Print', badge7:'Digital', badge8:'Premium',
+    n1:'Sunset — Ksar Sghir', d1:'A magical sunset over the Strait of Gibraltar', c1:'MAD', btn1:'Order Now',
+    n2:'Ksar Sghir Beach', d2:'Sandy beach in the quiet morning • A3', c2:'MAD', btn2:'Order Now',
+    n3:'Spring in Belyounech', d3:'Yellow flowers with sea view • A3', c3:'MAD', btn3:'Order Now',
+    n4:'Crescent and Star', d4:'Rare crescent shot • A2', c4:'MAD', btn4:'Order Now',
+    n5:'Traditional Fishing Port', d5:'Fishing boats at dawn • 4K', c5:'MAD', btn5:'Order Now',
+    n6:'Natural Landscapes', d6:'Panoramic view of the region • A3', c6:'MAD', btn6:'Order Now',
+    n7:'Beach at Dawn', d7:'Sand sculpted by waves • 4K', c7:'MAD', btn7:'Order Now',
+    n8:'City at Night', d8:'City lights reflected on water • A2', c8:'MAD', btn8:'Order Now',
+    'cta-title':'📦 Custom order?', 'cta-desc':'Want a photo in a specific size or special print? Contact us directly', 'cta-btn':'📱 Contact on WhatsApp'
+  }
+};
+
+function setL(lang) {
+  var t = L[lang];
+  document.documentElement.setAttribute('dir', t.dir);
+  document.body.setAttribute('dir', t.dir);
+  Object.keys(t).forEach(function(id) {
+    if (id === 'dir') return;
+    var el = document.getElementById(id);
+    if (el) el.innerHTML = t[id];
+  });
+  document.querySelectorAll('.lb').forEach(function(b) {
+    b.classList.remove('on');
+    if (b.getAttribute('onclick') === "setL('" + lang + "')") b.classList.add('on');
+  });
+  try { localStorage.setItem('sl', lang); } catch(e) {}
+}
+
+function filter(btn, type) {
+  document.querySelectorAll('.fbtn').forEach(function(b) { b.classList.remove('on'); });
+  btn.classList.add('on');
+  document.querySelectorAll('.card').forEach(function(c) {
+    c.classList.toggle('hidden', type !== 'all' && c.getAttribute('data-type') !== type);
+  });
+}
+
+(function() {
+  var s = 'ar';
+  try { s = localStorage.getItem('sl') || 'ar'; } catch(e) {}
+  setL(s);
+})();
+</script>
+
+</body>
+</html>
